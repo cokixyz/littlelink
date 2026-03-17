@@ -35,27 +35,17 @@
         margin-bottom: 30px;
       }
 
-      /* --- 更新：为头像添加 RockBros 绿色动态边框和发光效果 --- */
+      /* 为头像添加 RockBros 绿色动态边框和发光效果 */
       .avatar {
-        /* 基础设置：设置 4 像素宽的实线边框，颜色为官方绿 */
         border: 4px solid #17A05E !important;
-        
-        /* 核心：添加过渡效果，使所有样式变化在 0.3s 内平滑完成 */
         transition: all 0.3s ease-in-out !important;
-
-        /* 在亮色模式下添加一个极柔和的初始光晕（可选，增强质感） */
         box-shadow: 0 0 10px rgba(23, 160, 94, 0.2); 
       }
 
-      /* 当鼠标悬停（Hover）在头像上时触发的效果 */
+      /* 鼠标悬停（Hover）效果 */
       .avatar:hover {
-        /* 动态放大：将头像大小增加 10% (1.1 倍) */
-        transform: scale(1.1) rotate(0.1deg); /* 增加一点点旋转以使放大更平滑 */
-        
-        /* 动态发光：添加一个更强烈、更鲜艳的绿色发光阴影 */
+        transform: scale(1.1) rotate(0.1deg); 
         box-shadow: 0 0 20px rgba(23, 160, 94, 1);
-        
-        /* 动态加深边框：让边框颜色稍微变深一点，增加层次感 */
         border-color: #138750 !important;
       }
     </style>
@@ -79,15 +69,23 @@
 
             <div class="button-stack" role="navigation">
 
-              <a class="button button-default" href="https://rockbrosclothing.com" target="_blank" rel="noopener" role="button">
-                <img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">Official Website
+              <a class="button button-default" href="https://rockbrosclothing.com/s/d0077f" target="_blank" rel="noopener" role="button">
+                <img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">Official Store
               </a>
 
               <a class="button button-default" href="https://rockbrosclothing.com/collections/spring-collection" target="_blank" rel="noopener" role="button">
-                <img class="icon" aria-hidden="true" src="images/icons/generic-shopping-bag.svg" alt="Shopping Bag Icon">Shop Spring Collection
+                <img class="icon" aria-hidden="true" src="images/icons/generic-shopping-bag.svg" alt="Shopping Bag Icon">Spring Collection
               </a>
 
-              <a class="button button-default" href="https://rockbrosclothing.com" target="_blank" rel="noopener" role="button">
+              <a class="button button-default" href="https://rockbrosclothing.com/collections/cycling-jersey/Men's" target="_blank" rel="noopener" role="button">
+                <img class="icon" aria-hidden="true" src="images/icons/generic-shopping-bag.svg" alt="Men's Jersey Icon">Men's Art Cycling Jerseys
+              </a>
+
+              <a class="button button-default" href="https://rockbrosclothing.com/collections/cycling-jersey/Women's" target="_blank" rel="noopener" role="button">
+                <img class="icon" aria-hidden="true" src="images/icons/generic-shopping-bag.svg" alt="Women's Jersey Icon">Women's Art Cycling Jerseys
+              </a>
+
+              <a class="button button-default" href="https://rockbrosclothing.com/s/d0077f" target="_blank" rel="noopener" role="button">
                 <img class="icon" aria-hidden="true" src="images/icons/generic-shopping-tag.svg" alt="Discount Icon">Single Jersey Only $80.99 (Code: RIDE39)
               </a>
 
@@ -95,12 +93,16 @@
                 <img class="icon" aria-hidden="true" src="images/icons/instagram.svg" alt="Instagram Logo">Instagram
               </a>
 
+              <a class="button button-faceb" href="https://www.facebook.com/rockbrosclothing.cc" target="_blank" rel="noopener" role="button">
+                <img class="icon" aria-hidden="true" src="images/icons/facebook.svg" alt="Facebook Logo">Facebook
+              </a>
+
               <a class="button button-threads" href="https://www.threads.com/@rockbros_clothing" target="_blank" rel="noopener" role="button">
                 <img class="icon" aria-hidden="true" src="images/icons/threads.svg" alt="Threads Logo">Threads
               </a>
 
-              <a class="button button-faceb" href="https://www.facebook.com/rockbrosclothing.cc" target="_blank" rel="noopener" role="button">
-                <img class="icon" aria-hidden="true" src="images/icons/facebook.svg" alt="Facebook Logo">Facebook
+              <a class="button button-default" href="mailto:service@rockbrosclothing.com" target="_blank" rel="noopener" role="button">
+                <img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">Contact Us
               </a>
 
           </div>
