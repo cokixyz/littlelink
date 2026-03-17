@@ -22,8 +22,8 @@
     <style>
       .button.button-default {
         background-color: #17A05E !important; /* RockBros Green */
-        color: white !important; /* Text color on green background */
-        border: none !important; /* Ensure no border, if any */
+        color: white !important; 
+        border: none !important; 
       }
       /* 按钮悬停变深 */
       .button.button-default:hover {
@@ -35,65 +35,11 @@
         margin-bottom: 30px;
       }
 
-      /* ============================================================ */
-      /* --- 更新：为头像添加随滚动消失/显现的动态放大发光效果 --- */
-      /* ============================================================ */
-
-      /* 1. 定义动画关键帧：从正常状态过渡到全效果（放大+脉冲发光） */
-      @keyframes dynamicPulseAndGlowScroll {
-        /* 0% (对应滚动深处，当 animation-direction 为 reverse 时) - 正常状态 
-        */
-        0% {
-          transform: scale(1) rotate(0deg);
-          box-shadow: 0 0 10px rgba(23, 160, 94, 0.2); /* 亮色模式下极柔和的初始光晕 */
-          border-color: #17A05E !important; /* 官方绿基础边框 */
-        }
-        
-        /* 100% (对应滚动顶部，当 animation-direction 为 reverse 时) - 全效果脉冲 
-          通过多步骤模拟细微的动态脉冲
-        */
-        50% {
-          transform: scale(1.1) rotate(0.1deg); /* 全放大 */
-          box-shadow: 0 0 20px rgba(23, 160, 94, 1); /* 全发光 */
-          border-color: #138750 !important; /* 边框变深 */
-        }
-        100% {
-          transform: scale(1.11) rotate(0.1deg); /* 脉冲峰值，稍微再大一点 */
-          box-shadow: 0 0 22px rgba(23, 160, 94, 1); /* 发光增强 */
-          border-color: #138750 !important;
-        }
-      }
-
-      /* 2. 更新头像样式，应用随滚动驱动的动画 */
+      /* --- 仅保留静态的绿色边框和发光效果 --- */
       .avatar {
-        border: 4px solid #17A05E !important; /* 基础绿色圈，暗色模式识别用 */
-        
-        /* 核心：应用随滚动驱动的动画
-          - dynamicPulseAndGlowScroll: 应用我们定义的动画。
-          - 1ms: 持续时间可以极短，因为它是通过时间轴驱动的。
-          - reverse: 【关键】动画方向反转。
-            - 滚动 0px 时：应用动画的 100% 状态 (脉冲全效果)。
-            - 向下滚动时：平滑过渡到 0% 状态 (正常状态，效果消失)。
-          - animation-timeline: scroll(nearest): 使用最近的可滚动祖先的时间轴（通常是文档）。
-        */
-        animation-name: dynamicPulseAndGlowScroll;
-        animation-duration: 1ms; 
-        animation-direction: reverse;
-        animation-timeline: scroll(nearest);
-
-        /* 设置默认值，以确保：
-          - 1. 在不支持 CSS 滚动时间轴的浏览器中，保持顶部全效果状态。
-          - 2. 在向下滚动，动画效果消失后，提供一个过渡效果（如果有 hover 逻辑）
-        */
-        transform: scale(1.1) rotate(0.1deg); 
-        box-shadow: 0 0 20px rgba(23, 160, 94, 1);
-        border-color: #138750 !important;
-        
-        /* 保持平滑过渡效果（虽然它是随滚动驱动的，但保持一个 transition 有利于不支持或悬停） */
-        transition: all 0.3s ease-in-out !important; 
+        border: 4px solid #17A05E !important; /* 官方绿基础边框 */
+        box-shadow: 0 0 20px rgba(23, 160, 94, 0.8) !important; /* 静态常亮发光效果 */
       }
-
-      /* ============================================================ */
     </style>
   </head>
 
@@ -147,6 +93,10 @@
                 <img class="icon" aria-hidden="true" src="images/icons/threads.svg" alt="Threads Logo">Threads
               </a>
               
+              <a class="button button-default" href="mailto:service@rockbrosclothing.com" role="button">
+                <img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">Contact Us
+              </a>
+
           </div>
 
           <footer>
